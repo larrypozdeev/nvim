@@ -20,6 +20,16 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ["<C-Space>"] = cmp.mapping.complete(),
 })
 
+require('lspconfig').lua_ls.setup({})
+require('lspconfig').rust_analyzer.setup({
+  settigns = {
+    ["rust_analyzer"] = {
+      diagnostic = {
+        enable = true;
+      }
+    }
+  }
+})
 cmp_mappings['<Tab>'] = nil
 cmp_mappings['<S-Tab>'] = nil
 

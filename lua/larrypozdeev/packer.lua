@@ -49,7 +49,7 @@ return require('packer').startup(function(use)
 		branch = 'v1.x',
 		requires = {
 			-- LSP Support
-			{ 'neovim/nvim-lspconfig' },
+			{ 'neovim/nvim-lspconfig'},
 			{ 'williamboman/mason.nvim' },
 			{ 'williamboman/mason-lspconfig.nvim' },
 
@@ -69,7 +69,11 @@ return require('packer').startup(function(use)
 
 	use("tpope/vim-sleuth")
 
-	use("lukas-reineke/indent-blankline.nvim")
+	use { "lukas-reineke/indent-blankline.nvim",
+		config = function()
+			require("ibl").setup {}
+		end
+	}
 	use("kyazdani42/nvim-web-devicons")
 	use {
 		'nvim-lualine/lualine.nvim',
