@@ -1,7 +1,7 @@
 require("larrypozdeev.remap")
 require("larrypozdeev.set")
 local augroup = vim.api.nvim_create_augroup
-local LarryPozdeevGroup = augroup('ThePrimeagen', {})
+local LarryPozdeevGroup = augroup('LarryPozdeev', {})
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
@@ -21,7 +21,7 @@ autocmd('TextYankPost', {
     end,
 })
 
-autocmd({"BufWritePre"}, {
+autocmd({ "BufWritePre" }, {
     group = LarryPozdeevGroup,
     pattern = "*",
     command = [[%s/\s\+$//e]],
