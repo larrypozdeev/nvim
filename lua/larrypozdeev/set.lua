@@ -29,3 +29,10 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 vim.cmd("colorscheme rose-pine")
 
+vim.api.nvim_set_keymap("n", "t", "l", { noremap = true })
+vim.api.nvim_set_keymap("n", "e", "k", { noremap = true })
+
+vim.api.nvim_set_keymap("n", "n", "j", { noremap = true })
+
+vim.api.nvim_set_keymap("n", "s", "h", { noremap = true })
+
