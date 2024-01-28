@@ -29,10 +29,11 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 vim.cmd("colorscheme rose-pine")
 
-vim.api.nvim_set_keymap("n", "t", "l", { noremap = true })
-vim.api.nvim_set_keymap("n", "e", "k", { noremap = true })
-
-vim.api.nvim_set_keymap("n", "n", "j", { noremap = true })
-
-vim.api.nvim_set_keymap("n", "s", "h", { noremap = true })
+-- Map <leader>o & <leader>O to newline without insert mode
+vim.api.nvim_set_keymap("n", "<leader>o",
+  [[:<C-u>call append(line("."), repeat([""], v:count1))<CR>]],
+  { silent = true, desc = "newline below (no insert-mode)" })
+vim.api.nvim_set_keymap("n", "<leader>O",
+  [[:<C-u>call append(line(".")-1, repeat([""], v:count1))<CR>]],
+  { silent = true, desc = "newline above (no insert-mode)" })
 
