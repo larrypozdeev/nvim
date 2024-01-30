@@ -30,6 +30,7 @@ require('lspconfig').rust_analyzer.setup({
     }
   }
 })
+require('lspconfig').intelephense.setup({})
 cmp_mappings['<Tab>'] = nil
 cmp_mappings['<S-Tab>'] = nil
 

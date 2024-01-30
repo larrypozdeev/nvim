@@ -71,6 +71,7 @@ return require('packer').startup(function(use)
 		config = function()
 			require('mini.surround').setup {}
 			require('mini.files').setup {}
+			require('mini.pairs').setup {}
 			require('mini.cursorword').setup {
 				config = {
 					delay = 0,
