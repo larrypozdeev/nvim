@@ -26,7 +26,9 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
+vim.opt.termguicolors = true
 vim.opt.colorcolumn = "80"
+
 vim.cmd("colorscheme rose-pine")
 
 -- Map <leader>o & <leader>O to newline without insert mode
