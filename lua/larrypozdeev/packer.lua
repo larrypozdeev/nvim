@@ -67,6 +67,17 @@ return require('packer').startup(function(use)
 		}
 	}
 
+	use { 'echasnovski/mini.nvim',
+		config = function()
+			require('mini.surround').setup {}
+			require('mini.files').setup {}
+			require('mini.cursorword').setup {
+				config = {
+					delay = 0,
+				}
+			}
+		end
+	}
 	use("tpope/vim-sleuth")
 
 	use { "lukas-reineke/indent-blankline.nvim",
