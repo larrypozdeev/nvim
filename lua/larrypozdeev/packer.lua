@@ -70,7 +70,6 @@ return require('packer').startup(function(use)
 	use { 'echasnovski/mini.nvim',
 		config = function()
 			require('mini.surround').setup {}
-			require('mini.files').setup {}
 			require('mini.pairs').setup {}
 			require('mini.cursorword').setup {
 				config = {
