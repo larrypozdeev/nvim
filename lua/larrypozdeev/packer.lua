@@ -44,6 +44,8 @@ return require('packer').startup(function(use)
 	use("mbbill/undotree")
 	use("tpope/vim-fugitive")
 	use("nvim-treesitter/nvim-treesitter-context");
+
+
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v1.x',
@@ -52,6 +54,13 @@ return require('packer').startup(function(use)
 			{ 'neovim/nvim-lspconfig' },
 			{ 'williamboman/mason.nvim' },
 			{ 'williamboman/mason-lspconfig.nvim' },
+
+			-- debugging
+			{ 'mfussenegger/nvim-dap' },
+			{ 'jay-babu/mason-nvim-dap.nvim' },
+			{ 'theHamsta/nvim-dap-virtual-text' },
+			{ 'rcarriga/nvim-dap-ui' },
+			{ 'Pocco81/DAPInstall.nvim' },
 
 			-- Autocompletion
 			{ 'hrsh7th/nvim-cmp' },
