@@ -8,7 +8,7 @@ return {
     "3rd/image.nvim", -- image support in preview window
   },
   config = function()
-    vim.api.nvim_set_keymap('n', '<C-n>', ':Neotree filesystem reveal right<CR>', {silent = true})
+    vim.api.nvim_set_keymap('n', '<C-n>', ':Neotree filesystem toggle right<CR>', {silent = true})
 
   end
 }
