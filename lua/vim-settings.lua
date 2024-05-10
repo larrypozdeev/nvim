@@ -34,7 +34,7 @@ vim.opt.inccommand = 'split'
 vim.opt.cursorline = true
 
 -- Decrease update time
-vim.opt.updatetime = 150
+vim.opt.updatetime = 50
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
@@ -44,8 +44,9 @@ vim.opt.smartcase = true
 --  See `:help 'list'`
 --  and `:help 'listchars'`
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+-- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
+vim.api.nvim_set_keymap("n", "<leader>pv", ":Explore<CR>", {silent = true, desc='Explore'})
 
 -- Map <leader>o & <leader>O to newline without insert mode
 vim.api.nvim_set_keymap("n", "<leader>o",

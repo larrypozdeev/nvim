@@ -1,12 +1,31 @@
 return {
+  enable=false,
   "nvim-treesitter/nvim-treesitter",
-  build = ":TSUpdate",
+  event = { "BufNewFile", "BufReadPost" },
+  build = function()
+    vim.cmd("TSUpdate")
+  end,
+  cmd = "TSUpdate",
   config = function()
-    local config = require("nvim-treesitter.configs")
-    config.setup({
+    require("nvim-treesitter.configs").setup({
       auto_install = true,
-      highlight = { enable = true },
-      indent = { enable = true },
+      ensure_installed = {
+        "lua",
+        "astro",
+        "typescript",
+        "javascript",
+        "tsx",
+        "html",
+      },
+      highlight = {
+        enable = true,
+      },
+      textsubjects = {
+        enable = true,
+      },
+      indent = {
+        enable = true,
+      },
     })
-  end
+  end,
 }
