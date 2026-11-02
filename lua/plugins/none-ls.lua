@@ -63,7 +63,7 @@ return {
       --   require("none-ls.formatting.eslint_d"),
       -- })
 
-      vim.keymap.set('n', '<leader>f', vim.lsp.buf.format, {})
+      vim.keymap.set('n', '<leader>f', vim.lsp.buf.format, { desc = "[F]ormat current buffer" })
     end
   }
 }

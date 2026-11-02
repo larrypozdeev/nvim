@@ -1,7 +1,7 @@
 return {
   {
     "nvim-telescope/telescope.nvim",
-    tag = "0.1.6",
+    version = "*", -- latest release (v0.2.x supports Neovim 0.12)
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope-ui-select.nvim",
@@ -35,7 +35,9 @@ return {
 
       -- Keymap for rest-nvim Telescope extension
       vim.keymap.set("n", "<leader>rh", function()
-        telescope.extensions.rest.rest({})
+        vim.schedule(function()
+          telescope.extensions.rest.select_env()
+        end)
       end, { desc = "Search REST History" })
     end,
   },

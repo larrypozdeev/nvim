@@ -1,9 +1,33 @@
-return {
-  "nvim-lualine/lualine.nvim",
-  config = function()
-    require('lualine').setup({
-      options = {
-        theme = "dracula"
-      }})
-  end
-}
+-- return {
+-- 	"nvim-lualine/lualine.nvim",
+-- 	config = function()
+-- 		-- Define a custom theme based on the dracula default
+-- 		local custom_dracula = require("lualine.themes.dracula")
+--
+-- 		-- Set the background of the middle section (c) to black
+-- 		-- Sections a and b usually have specific colors; if you want them black too,
+-- 		-- update custom_dracula.normal.a.bg, etc.
+-- 		custom_dracula.normal.c.bg = "#000000"
+-- 		custom_dracula.insert.c.bg = "#000000"
+-- 		custom_dracula.visual.c.bg = "#000000"
+-- 		custom_dracula.replace.c.bg = "#000000"
+-- 		custom_dracula.command.c.bg = "#000000"
+-- 		custom_dracula.inactive.c.bg = "#000000"
+-- 		custom_dracula.normal.a.bg = "#000000"
+-- 		custom_dracula.normal.b.bg = "#000000"
+-- 		custom_dracula.normal.c.bg = "#000000"
+-- 		-- These colors control the actual text/foreground to keep it readable
+-- 		custom_dracula.normal.a.fg = "#bd93f9" -- Keeps the purple text color
+-- 		custom_dracula.normal.b.fg = "#f8f8f2" -- Keeps the white text color
+--
+-- 		require("lualine").setup({
+-- 			options = {
+-- 				theme = custom_dracula,
+-- 				component_separators = "",
+-- 				section_separators = "",
+-- 			},
+-- 		})
+-- 	end,
+-- }
+--
+return {}
